@@ -31,7 +31,7 @@ genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def find_closest_question(user_query ,vectorizer, question_vectors,df):
-  query_vector = vectorizer.transform([user_query,lower()])
+  query_vector = vectorizer.transform([user_query.lower()])
   similarities = cosine_similarity(query_vector, question_vectors).flatten()
   best_match_index = similarities.argmax()
   best_match_score = similarities[best_match_index]
