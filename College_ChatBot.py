@@ -1,4 +1,4 @@
-import streamlit as lit
+import streamlit as st
 import pandas as pd
 import google.generativeai as genai
 from sklearn.metrics.pairwise import cosine_similarity
